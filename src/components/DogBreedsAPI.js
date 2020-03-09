@@ -25,33 +25,32 @@ const sortDescending = (firstDog, secondDog) => {
 
 class DogBreedsAPI extends Component {
 	componentDidMount() {
-		this.props.fetchDogBreeds();
+		this.props.fetchDogBreeds().then(() => {
+			const { dogs } = this.props;
+			const breedsFetches = [];
+
+			dogs.forEach(
+				dog => breedsFetches.push(this.props.fetchDogBreedImages(dog.breed))
+			);
+
+			Promise.all(breedsFetches).then(() => this.props.getTopDogs(dogs, sortDescending));
+		});
 	}
 
 	render() {
-		const { error, isLoaded, isLastBreedLoaded, areTopDogsCalculated, dogs, topDogs } = this.props;
+		const { error, topDogs } = this.props;
 
 		if (error) {
 			return <div>{error.message}</div>;
-		} else if (!isLoaded || !isLastBreedLoaded) {
-			if (isLoaded) {
-				const lastDogIndex = dogs.length - 1;
-
-				dogs.forEach((dog, index) => this.props.fetchDogBreedImages(dog.breed, index === lastDogIndex));
-			}
-
-			return <div>Loading chart...</div>;
-		} else if (!areTopDogsCalculated) {
-			this.props.getTopDogs(dogs, sortDescending);
-
+		} else if (topDogs.length === 0) {
 			return <div>Loading chart...</div>;
 		}
 
 		return (
 			<Chart
 				className='pie-chart'
-				width={'900px'}
-				height={'700px'}
+				width={'100%'}
+				height={'600px'}
 				chartType='PieChart'
 				loader={<div>Loading Chart</div>}
 				data={[
