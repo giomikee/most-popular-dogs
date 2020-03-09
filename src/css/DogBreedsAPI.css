@@ -1,0 +1,13 @@
+/*
+ * Created on Mon Mar 09 2020
+ * Author: Gio Justiniano
+ * More info: https://github.com/giomikee/
+ *
+ * Copyright (c) 2020
+ */
+
+.pie-chart {
+    border-style: double;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
