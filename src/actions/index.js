@@ -13,36 +13,30 @@ import { FETCH_DOG_BREEDS, FETCH_DOG_BREED_IMAGES, FETCH_ERROR, GET_TOP_DOGS } f
 const API_PREFIX = 'https://dog.ceo/api/breed';
 const ALL_BREEDS = `${API_PREFIX}s/list/all`;
 
-export const fetchDogBreeds = () => dispatch => {
+export const fetchDogBreeds = () => dispatch =>
 	fetch(ALL_BREEDS)
 		.then(res => res.json())
 		.then(dogs => dispatch({
 			type: FETCH_DOG_BREEDS,
-			isLoaded: true,
 			payload: Object.keys(dogs.message)
 		}))
 		.catch(error => dispatch({
 			type: FETCH_ERROR,
-			isLoaded: true,
 			payload: error
 		}));
-};
 
-export const fetchDogBreedImages = (dogBreed, isLastBreedLoaded = false) => dispatch => {
+export const fetchDogBreedImages = dogBreed => dispatch =>
 	fetch(`${API_PREFIX}/${dogBreed}/images`)
 		.then(res => res.json())
 		.then(images => dispatch({
 			type: FETCH_DOG_BREED_IMAGES,
 			breed: dogBreed,
-			isLastBreedLoaded,
 			payload: images.message.length
 		}))
 		.catch(error => dispatch({
 			type: FETCH_ERROR,
-			isLoaded: true,
 			payload: error
 		}));
-};
 
 export const getTopDogs = (dogs, compareFunc) => dispatch => {
 	const topDogs = [...dogs].sort(compareFunc).slice(0, 10);

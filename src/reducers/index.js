@@ -11,9 +11,6 @@ import { FETCH_DOG_BREEDS, FETCH_DOG_BREED_IMAGES, FETCH_ERROR, GET_TOP_DOGS } f
 const initialState = {
 	dogs: [],
 	topDogs: [],
-	isLoaded: false,
-	isLastBreedLoaded: false,
-	areTopDogsCalculated: false,
 	error: null
 };
 
@@ -25,8 +22,7 @@ export default (state = initialState, action) => {
 				dogs: action.payload.map(breed => ({
 					breed,
 					numImages: 0
-				})),
-				isLoaded: action.isLoaded
+				}))
 			};
 		case FETCH_DOG_BREED_IMAGES:
 			const dogBreedIndex = state.dogs.findIndex(dog => dog.breed === action.breed);
