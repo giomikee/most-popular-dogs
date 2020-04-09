@@ -6,6 +6,10 @@ Data provided by [Dog API](https://dog.ceo/dog-api/documentation/)
 
 *Coded with React Redux*
 
+## App Features
+![App demo](https://i.gyazo.com/b8f0c95a63a3ba6759880d05c6beeb28.gif)
+- Taking in the data coming from [Dog API](https://dog.ceo/dog-api/documentation/), this application visualizes the most popular dog breeds based on the number of stored images per breed. The representation is done with a pie chart that changes dynamically whenever the data used by the application is modified 
+
 ## Getting Started
 
 Clone the repository to your machine by running:
