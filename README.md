@@ -2,7 +2,7 @@
 
 This application shows the top 10 popular dog breeds based on the number of stored images per breed. The top 10 dog breeds are displayed in a pie chart showing the percentage of their popularity compared to the rest.
 
-Data provided by [Dog API](https://dog.ceo/dog-api/documentation/)
+*Data provided by [Dog API](https://dog.ceo/dog-api/documentation/)*
 
 *Coded with React Redux*
 
@@ -12,6 +12,10 @@ Data provided by [Dog API](https://dog.ceo/dog-api/documentation/)
 
 ## Getting Started
 
+### In production
+Try out the application by opening https://giomikee.github.io/most-popular-dogs/ in your browser
+
+### In local
 Clone the repository to your machine by running:
 ```bash
 git clone https://github.com/giomikee/most-popular-dogs
