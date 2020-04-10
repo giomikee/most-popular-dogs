@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/most-popular-dogs/static/css/main.77b421c7.chunk.css",
+    "main.js": "/most-popular-dogs/static/js/main.7fa247bf.chunk.js",
+    "main.js.map": "/most-popular-dogs/static/js/main.7fa247bf.chunk.js.map",
+    "runtime-main.js": "/most-popular-dogs/static/js/runtime-main.205640b4.js",
+    "runtime-main.js.map": "/most-popular-dogs/static/js/runtime-main.205640b4.js.map",
+    "static/js/2.fdc31b76.chunk.js": "/most-popular-dogs/static/js/2.fdc31b76.chunk.js",
+    "static/js/2.fdc31b76.chunk.js.map": "/most-popular-dogs/static/js/2.fdc31b76.chunk.js.map",
+    "index.html": "/most-popular-dogs/index.html",
+    "precache-manifest.4e1117cd16d9f679b87f0f805ba220e1.js": "/most-popular-dogs/precache-manifest.4e1117cd16d9f679b87f0f805ba220e1.js",
+    "service-worker.js": "/most-popular-dogs/service-worker.js",
+    "static/css/main.77b421c7.chunk.css.map": "/most-popular-dogs/static/css/main.77b421c7.chunk.css.map",
+    "static/js/2.fdc31b76.chunk.js.LICENSE.txt": "/most-popular-dogs/static/js/2.fdc31b76.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.205640b4.js",
+    "static/js/2.fdc31b76.chunk.js",
+    "static/css/main.77b421c7.chunk.css",
+    "static/js/main.7fa247bf.chunk.js"
+  ]
+}
