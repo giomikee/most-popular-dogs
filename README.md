@@ -12,10 +12,12 @@ This application shows the top 10 popular dog breeds based on the number of stor
 
 ## Getting Started
 
-### In production
+### In production
+
 Try out the application by opening https://giomikee.github.io/most-popular-dogs/ in your browser
 
-### In local
+### In local
+
 Clone the repository to your machine by running:
 ```bash
 git clone https://github.com/giomikee/most-popular-dogs
